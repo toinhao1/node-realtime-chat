@@ -1,14 +1,16 @@
 const moment = require('moment');
 
-const generateMessage = text => {
+const generateMessage = (username, text) => {
   return {
+    username,
     text,
     createdAt: moment(new Date().getTime()).format('LT')
   };
 };
 
-const generateLocationMessage = url => {
+const generateLocationMessage = (username, url) => {
   return {
+    username,
     url,
     createdAt: moment(new Date().getTime()).format('LT')
   };
